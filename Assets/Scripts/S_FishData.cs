@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using Unity.Mathematics;
 using Unity.VisualScripting;
@@ -20,8 +21,12 @@ public class S_FishData : MonoBehaviour
     {
         ImportData();
         CreateDifficultyPools();
-        TestPoolSkillcheck();
+        //TestPoolSkillcheck();
+        //TestGetFishValue();
+        
     }
+
+
 
     void ImportData()
     {
@@ -47,6 +52,12 @@ public class S_FishData : MonoBehaviour
         { 
             Debug.Log(item.nameID + " Tier: " + item.tier);
         }
+    }
+
+    void TestGetFishValue()
+    {
+       Debug.Log( GetFishValue("Shrimp", 2));
+
     }
 
     void DebugDificultyPool()
@@ -91,9 +102,9 @@ public class S_FishData : MonoBehaviour
         return approvedDifficultyPools;
     } 
 
-    void GetFishValue()
+    public float GetFishValue(string nameID, int tierValue)
     {
-        
+        return data[nameID].passiveIncome[tierValue];
     }
 
 }

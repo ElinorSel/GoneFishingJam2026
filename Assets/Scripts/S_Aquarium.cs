@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using System.IO;
+using UnityEngine.InputSystem;
 
 public class S_Aquarium : MonoBehaviour
 {
@@ -31,17 +32,29 @@ public class S_Aquarium : MonoBehaviour
 
     private IEnumerator PassiveIncome()
     {
-        
-        foreach (S_Fish fish in _fishes)
+        foreach((string nameID, int tier) fish in _fishCount.Keys)
         {
-            gameManager.AddMoney(fish.PassiveIncome);
+            gameManager.AddMoney(fishData.GetFishValue(fish.nameID,fish.tier));
+            Debug.Log(fishData.GetFishValue(fish.nameID,fish.tier));
         }
+        
 
         Debug.Log("Current money" + gameManager.Money);
         yield return new WaitForSeconds(_passiveIncomeSpeed);
        
     }
-    
+      public void PassiveIncomeTest()
+    {
+        foreach((string nameID, int tier) fish in _fishCount.Keys)
+        {
+            gameManager.AddMoney(fishData.GetFishValue(fish.nameID,fish.tier));
+            Debug.Log(fishData.GetFishValue(fish.nameID,fish.tier));
+        }
+        
+
+        Debug.Log("Current money" + gameManager.Money);
+       
+    }
 
     public void AddFish( string nameID, int tier)
     {
@@ -94,6 +107,7 @@ public class S_Aquarium : MonoBehaviour
                 //remove all fish
                 _fishCount[(nameID, tier)] = 0;
                 MergeCheck(nameID, tier+1);
+                //TODO: ADD MERGE LIMIT!!! LOL max 3
             }
         }
 
