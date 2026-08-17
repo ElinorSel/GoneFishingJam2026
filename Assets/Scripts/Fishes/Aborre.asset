@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c86709bdb28a4d248a0319b4eb9ced81, type: 3}
+  m_Name: Aborre
+  m_EditorClassIdentifier: Assembly-CSharp::SO_Fish
+  nameID: Aborre
+  tier: 000000000100000002000000
+  difficulty: 000000000100000002000000
+  passiveIncome:
+  - 0.1
+  - 2
+  - 15
+  rarity: 000000000100000002000000
+  Prefabs:
+  - {fileID: 8029229966350652713, guid: 5a3f211b56e69f242bf8fd8b00e4228c, type: 3}
+  - {fileID: 5780113592107716798, guid: 1de17fcadb6698d4e8bd9f58f5f33b8b, type: 3}
+  - {fileID: 2788924621761803021, guid: 52cf218bf1b743f4a931909778e7c498, type: 3}
