@@ -35,9 +35,8 @@ public class S_Aquarium : MonoBehaviour
             foreach((string nameID, int tier) fish in _fishCount.Keys)
         {
             gameManager.AddMoney(fishData.GetFishValue(fish.nameID,fish.tier));
-            Debug.Log(fishData.GetFishValue(fish.nameID,fish.tier));
         }
-        Debug.Log("Current money" + gameManager.Money);
+        //Debug.Log("Current money" + gameManager.Money);
         yield return new WaitForSeconds(_passiveIncomeSpeed);
         }
        
@@ -67,13 +66,16 @@ public class S_Aquarium : MonoBehaviour
         
         MergeCheck(nameID, tier);
 
+
         /*
         foreach(var key in _fishCount.Keys)
         {
             Debug.Log( key.nameID + " tier " + key.tier + " Count: " +_fishCount[key]);
         }
         Debug.Log("__________________________________");
+
         */
+        
         
     }
 
@@ -97,7 +99,7 @@ public class S_Aquarium : MonoBehaviour
             _fishCount[(nameID, tier)] = 0;  
         }
 
-        if(_fishCount[(nameID, tier)] > _mergeThreshold - 2)
+        if(_fishCount[(nameID, tier)] > _mergeThreshold - 2 && (tier <= 2)) //max merge tier
         {
             _fishCount[(nameID, tier)] += 1; //add fish
 
@@ -107,7 +109,6 @@ public class S_Aquarium : MonoBehaviour
                 //remove all fish
                 _fishCount[(nameID, tier)] = 0;
                 MergeCheck(nameID, tier+1);
-                //TODO: ADD MERGE LIMIT!!! LOL max 3
             }
         }
 
