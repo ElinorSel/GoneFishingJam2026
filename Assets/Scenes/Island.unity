@@ -2240,7 +2240,7 @@ GameObject:
   - component: {fileID: 1602967707}
   - component: {fileID: 1602967706}
   m_Layer: 5
-  m_Name: fish (1)
+  m_Name: income
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2310,9 +2310,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 224556127}
-        m_TargetAssemblyTypeName: S_GameManager, Assembly-CSharp
-        m_MethodName: PlayerFish
+      - m_Target: {fileID: 1729280586}
+        m_TargetAssemblyTypeName: S_Aquarium, Assembly-CSharp
+        m_MethodName: PassiveIncomeTest
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

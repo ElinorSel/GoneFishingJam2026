@@ -23,8 +23,6 @@ public class S_Aquarium : MonoBehaviour
      private Dictionary<(string nameID, int tier), int> _fishCount = new();
      private List<S_Fish> _fishes = new();
 
-     private
-
     void Start()
     {
         StartCoroutine(PassiveIncome());
@@ -32,17 +30,19 @@ public class S_Aquarium : MonoBehaviour
 
     private IEnumerator PassiveIncome()
     {
-        foreach((string nameID, int tier) fish in _fishCount.Keys)
+        while(true) //TODO: only start when game is ready to start?
+        {
+            foreach((string nameID, int tier) fish in _fishCount.Keys)
         {
             gameManager.AddMoney(fishData.GetFishValue(fish.nameID,fish.tier));
             Debug.Log(fishData.GetFishValue(fish.nameID,fish.tier));
         }
-        
-
         Debug.Log("Current money" + gameManager.Money);
         yield return new WaitForSeconds(_passiveIncomeSpeed);
+        }
        
     }
+
       public void PassiveIncomeTest()
     {
         foreach((string nameID, int tier) fish in _fishCount.Keys)
