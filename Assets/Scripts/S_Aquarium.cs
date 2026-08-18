@@ -23,21 +23,28 @@ public class S_Aquarium : MonoBehaviour
      private Dictionary<(string nameID, int tier), int> _fishCount = new();
      private List<S_Fish> _fishes = new();
 
+    public float CurrentPassiveIncome {get; private set;}
+
     void Start()
     {
+        CurrentPassiveIncome  = 0;
         StartCoroutine(PassiveIncome());
     }
 
     private IEnumerator PassiveIncome()
     {
+        
         while(true) //TODO: only start when game is ready to start?
         {
+            float income = 0;
             foreach((string nameID, int tier) fish in _fishCount.Keys)
-        {
-            gameManager.AddMoney(fishData.GetFishPassiveIncome(fish.nameID,fish.tier));
-        }
-        //Debug.Log("Current money" + gameManager.Money);
-        yield return new WaitForSeconds(_passiveIncomeSpeed);
+            {
+                income += fishData.GetFishPassiveIncome(fish.nameID,fish.tier);
+                gameManager.AddMoney(fishData.GetFishPassiveIncome(fish.nameID,fish.tier));
+            }
+            //Debug.Log("Current money" + gameManager.Money);
+            CurrentPassiveIncome = income;
+            yield return new WaitForSeconds(_passiveIncomeSpeed);
         }
        
     }

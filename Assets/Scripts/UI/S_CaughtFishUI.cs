@@ -7,6 +7,8 @@ public class S_CaughtFishUI : MonoBehaviour
 
     S_GameManager gameManager;
     [SerializeField] TMP_Text sellLabel;
+
+    [SerializeField] GameObject caughtFishUI;
     private float _sellPrice;
     string _nameID;
     int _tier;
@@ -32,20 +34,20 @@ public class S_CaughtFishUI : MonoBehaviour
           _nameID = nameID;
           _tier = tier;
 
-        gameObject.SetActive(true);
+        caughtFishUI.SetActive(true);
 
     }
 
     public void KeepFish()
     {
         gameManager.HandleAddFish(_nameID, _tier);
-        gameObject.SetActive(false);
+        caughtFishUI.SetActive(false);
     }
 
     public void SellFish()
     {
         gameManager.HandleSellFish(_nameID, _tier);
-        gameObject.SetActive(false);
+        caughtFishUI.SetActive(false);
         
     }
 }

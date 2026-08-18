@@ -66,6 +66,11 @@ public class S_GameManager : MonoBehaviour
         AddMoney(fishData.GetFishSellPrice(name, tier));
     }
 
+    public float GetCurrentPassiveIncome()
+    {
+       return aquarium.CurrentPassiveIncome;
+    }
+
 
     //TODO: trigger autofishers from here
     //SKILL LVL increase handler updates autofish
