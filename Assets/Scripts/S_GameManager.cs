@@ -6,6 +6,7 @@ public class S_GameManager : MonoBehaviour
 {
     [SerializeField] float _money;
     [SerializeField] S_Aquarium aquarium;
+    [SerializeField] S_AquariumVisuals aquariumVisuals;
     [SerializeField] S_FishData fishData;
     [SerializeField] S_Fisher playerFisher; //change to fisher
 
@@ -58,7 +59,9 @@ public class S_GameManager : MonoBehaviour
 
     public void HandleAddFish( string name, int tier)
     {
-        aquarium.AddFish(name, tier); 
+        aquarium.AddFish(name, tier);
+        GameObject fishPrefab = fishData.getFishPrefab(name, tier);
+        aquariumVisuals.SpawnFish(fishPrefab);
     }
 
     public void HandleSellFish( string name, int tier)

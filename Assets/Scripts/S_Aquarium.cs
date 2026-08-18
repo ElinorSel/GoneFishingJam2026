@@ -87,17 +87,6 @@ public class S_Aquarium : MonoBehaviour
     }
 
 
-/*
-
-    void SpawnFish()
-    {
-        float spawnX = Random.Range(spawnMinX, spawnMaxX);
-        float spawnY = Random.Range(spawnMinY, spawnMaxY);
-    
-        Instantiate(fishData._aborrePrefabs[0], new Vector3(spawnX,spawnY,spawnZ), fishData._aborrePrefabs[0].transform.rotation);
-
-    } 
-*/
     void MergeCheck(string nameID, int tier)
     {
         //null check

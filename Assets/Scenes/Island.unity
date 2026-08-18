@@ -796,6 +796,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2058839507}
   m_LocalEulerAnglesHint: {x: -0.004, y: -90, z: 89.96}
+--- !u!1 &247303943 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9210651756475993723, guid: f4f5a58042c70514ab7f8136057c2e44, type: 3}
+  m_PrefabInstance: {fileID: 463614328}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &247303946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247303943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37929a35cda9c4c4a90088315b6c9f4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  spawnMaxX: 7.58
+  spawnMinX: -6.84
+  spawnMinY: 0.81
+  spawnMaxY: 11.88
+  spawnZ: 10.4
 --- !u!1 &359812188
 GameObject:
   m_ObjectHideFlags: 0
@@ -1296,6 +1318,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Managers
       objectReference: {fileID: 0}
+    - target: {fileID: 3416187699680561915, guid: f4f5a58042c70514ab7f8136057c2e44, type: 3}
+      propertyPath: aquariumVisuals
+      value: 
+      objectReference: {fileID: 247303946}
     - target: {fileID: 5640085997599766550, guid: f4f5a58042c70514ab7f8136057c2e44, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.36304
@@ -1352,7 +1378,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1933145090346993062, guid: f4f5a58042c70514ab7f8136057c2e44, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1798583493}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9210651756475993723, guid: f4f5a58042c70514ab7f8136057c2e44, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 247303946}
   m_SourcePrefab: {fileID: 100100000, guid: f4f5a58042c70514ab7f8136057c2e44, type: 3}
 --- !u!1 &487211217
 GameObject:
@@ -4053,7 +4082,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1488154425
 RectTransform:
   m_ObjectHideFlags: 0

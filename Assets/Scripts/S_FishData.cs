@@ -131,6 +131,12 @@ public class S_FishData : MonoBehaviour
         return data[nameID].sellPrice[tierValue];
     }
 
+    public GameObject getFishPrefab(string nameID, int tierValue)
+    {
+        return data[nameID].Prefabs[tierValue];
+    }
+    
+
     
 
 }
