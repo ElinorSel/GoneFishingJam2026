@@ -12,6 +12,8 @@ public class S_FishData : MonoBehaviour
     [SerializeField] public SO_Fish[] rawData;
     public Dictionary<string, SO_Fish> data = new();
 
+    
+    public static S_FishData Instance { get; private set; }
 
 
 
@@ -20,6 +22,14 @@ public class S_FishData : MonoBehaviour
 
     void Awake()
     {
+         if (Instance != null && Instance != this)
+        {
+            Debug.LogError("Multiple VisualizationSettings instances found!");
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
         fishPool = gameObject.AddComponent<S_FishPoolData>();
         ImportData();
         CreateDifficultyPools();
@@ -58,7 +68,7 @@ public class S_FishData : MonoBehaviour
 
     void TestGetFishValue()
     {
-       Debug.Log( GetFishValue("Shrimp", 2));
+       Debug.Log( GetFishPassiveIncome("Shrimp", 2));
 
     }
 
@@ -112,9 +122,15 @@ public class S_FishData : MonoBehaviour
         return approvedDifficultyPools;
     } 
 
-    public float GetFishValue(string nameID, int tierValue)
+    public float GetFishPassiveIncome(string nameID, int tierValue)
     {
         return data[nameID].passiveIncome[tierValue];
     }
+        public float GetFishSellPrice(string nameID, int tierValue)
+    {
+        return data[nameID].sellPrice[tierValue];
+    }
+
+    
 
 }

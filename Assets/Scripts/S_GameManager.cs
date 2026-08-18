@@ -1,4 +1,6 @@
 using UnityEngine;
+using System;
+
 
 public class S_GameManager : MonoBehaviour
 {
@@ -11,6 +13,10 @@ public class S_GameManager : MonoBehaviour
 
     
     public float Money => _money;
+
+
+    //_______________Events__________
+    public event Action<string, int> OnFishCaught;
 
     public void AddMoney(float value)
     {
@@ -46,9 +52,20 @@ public class S_GameManager : MonoBehaviour
             //Debug.Log($"Received Item: {result.name} at Tier: {result.tier}");
             
             //the result is returned and can be handled here
-            aquarium.AddFish(result.name, result.tier);
+            OnFishCaught.Invoke(result.name, result.tier);
         }, fishPoolData));
     }
+
+    public void HandleAddFish( string name, int tier)
+    {
+        aquarium.AddFish(name, tier); 
+    }
+
+    public void HandleSellFish( string name, int tier)
+    {
+        AddMoney(fishData.GetFishSellPrice(name, tier));
+    }
+
 
     //TODO: trigger autofishers from here
     //SKILL LVL increase handler updates autofish

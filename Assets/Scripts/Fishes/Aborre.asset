@@ -20,6 +20,7 @@ MonoBehaviour:
   - 2
   - 15
   rarity: 000000000100000002000000
+  sellPrice: 32000000640000002c010000
   Prefabs:
   - {fileID: 8029229966350652713, guid: 5a3f211b56e69f242bf8fd8b00e4228c, type: 3}
   - {fileID: 5780113592107716798, guid: 1de17fcadb6698d4e8bd9f58f5f33b8b, type: 3}

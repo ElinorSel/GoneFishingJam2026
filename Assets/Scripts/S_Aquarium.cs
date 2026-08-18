@@ -34,7 +34,7 @@ public class S_Aquarium : MonoBehaviour
         {
             foreach((string nameID, int tier) fish in _fishCount.Keys)
         {
-            gameManager.AddMoney(fishData.GetFishValue(fish.nameID,fish.tier));
+            gameManager.AddMoney(fishData.GetFishPassiveIncome(fish.nameID,fish.tier));
         }
         //Debug.Log("Current money" + gameManager.Money);
         yield return new WaitForSeconds(_passiveIncomeSpeed);
@@ -46,8 +46,8 @@ public class S_Aquarium : MonoBehaviour
     {
         foreach((string nameID, int tier) fish in _fishCount.Keys)
         {
-            gameManager.AddMoney(fishData.GetFishValue(fish.nameID,fish.tier));
-            Debug.Log(fishData.GetFishValue(fish.nameID,fish.tier));
+            gameManager.AddMoney(fishData.GetFishPassiveIncome(fish.nameID,fish.tier));
+            Debug.Log(fishData.GetFishPassiveIncome(fish.nameID,fish.tier));
         }
         
 
