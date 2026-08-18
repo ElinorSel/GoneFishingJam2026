@@ -12,9 +12,14 @@ public class S_GameManager : MonoBehaviour
     {
         _money += value;
     }
-        public void RemoveMoney(float value)
+    public bool RemoveMoney(float value)
     {
+        if(value > _money)
+        {
+            return false;
+        }
         _money -= value;
+        return true;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
