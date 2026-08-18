@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_Aquarium
   _passiveIncomeSpeed: 1
-  _mergeThreshold: 4
+  _mergeThreshold: 10
   gameManager: {fileID: 3416187699680561915}
   fishData: {fileID: 2193338812593678362}
   spawnMaxX: 7.58
