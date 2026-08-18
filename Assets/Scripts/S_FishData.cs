@@ -13,11 +13,12 @@ public class S_FishData : MonoBehaviour
     public Dictionary<string, SO_Fish> data = new();
 
 
+
     private Dictionary<int, List<(string nameID, int tier)>> difficultyPools = new();
+    private S_FishPoolData fishPool = new();
 
 
-
-    void Start()
+    void Awake()
     {
         ImportData();
         CreateDifficultyPools();
@@ -47,7 +48,7 @@ public class S_FishData : MonoBehaviour
     void TestPoolSkillcheck()
     {
         List<(string nameID, int tier)> result = new();
-        result = GetFishPool(0);
+        result = GetApprovedDifficultyPool(0);
         foreach((string nameID, int tier) item in result)
         { 
             Debug.Log(item.nameID + " Tier: " + item.tier);
@@ -92,7 +93,13 @@ public class S_FishData : MonoBehaviour
         }
     }
 
-    public List<(string nameID, int tier)> GetFishPool(int skillLvl)
+    void GetFishPool()
+    {
+        
+    }
+
+    //makes 1 long list of all possible fishes to get based on skill lvl
+    public List<(string nameID, int tier)> GetApprovedDifficultyPool(int skillLvl)
     {
         List<(string nameID, int tier)> approvedDifficultyPools = new();
         for(int i = 0; i <= skillLvl; i++)
