@@ -14,12 +14,13 @@ public class S_FishData : MonoBehaviour
 
 
 
-    private Dictionary<int, List<(string nameID, int tier)>> difficultyPools = new();
-    private S_FishPoolData fishPool = new();
 
+    private Dictionary<int, List<(string nameID, int tier)>> difficultyPools = new();
+    private S_FishPoolData fishPool;
 
     void Awake()
     {
+        fishPool = gameObject.AddComponent<S_FishPoolData>();
         ImportData();
         CreateDifficultyPools();
         //TestPoolSkillcheck();
@@ -93,9 +94,11 @@ public class S_FishData : MonoBehaviour
         }
     }
 
-    void GetFishPool()
+    //GM will call at start, and when skill lvl updates
+    public S_FishPoolData GetFishPool(int skillLvl)
     {
-        
+        fishPool.CreateFilteredDifficultyPools(GetApprovedDifficultyPool(skillLvl));
+        return fishPool;
     }
 
     //makes 1 long list of all possible fishes to get based on skill lvl

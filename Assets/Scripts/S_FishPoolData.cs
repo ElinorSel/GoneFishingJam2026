@@ -8,9 +8,12 @@ public class S_FishPoolData : MonoBehaviour
     List<(string nameID, int tier)> _tier1fish = new();
     List<(string nameID, int tier)> _tier2fish = new();
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    CreateFilteredDifficultyPools(List<(string nameID, int tier)> approvedDifficultyPool)
+    public List<(string nameID, int tier)> ApprovedDifficultyPool => _approvedDifficultyPool;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    //todo, not rlly gonna use this below part...
+    public void CreateFilteredDifficultyPools(List<(string nameID, int tier)> approvedDifficultyPool)
     {
         _approvedDifficultyPool = approvedDifficultyPool;
 

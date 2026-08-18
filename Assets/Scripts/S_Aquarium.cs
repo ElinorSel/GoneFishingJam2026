@@ -67,14 +67,14 @@ public class S_Aquarium : MonoBehaviour
         MergeCheck(nameID, tier);
 
 
-        /*
+        
         foreach(var key in _fishCount.Keys)
         {
             Debug.Log( key.nameID + " tier " + key.tier + " Count: " +_fishCount[key]);
         }
         Debug.Log("__________________________________");
 
-        */
+        
         
         
     }

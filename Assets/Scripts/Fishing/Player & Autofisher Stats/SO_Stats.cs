@@ -6,7 +6,7 @@ public class SO_Stats : ScriptableObject
     public string nameID; 
     public int luck;
     public float fishSpeed;
-    public float skill;
+    public int skill;
 
     public GameObject Prefab;
 }
