@@ -9,6 +9,7 @@ public class S_GameManager : MonoBehaviour
 {
     [SerializeField] float _money;
     [SerializeField] S_Aquarium aquarium;
+      [SerializeField] S_StorageManager storageManager;
     [SerializeField] S_AquariumVisuals aquariumVisuals;
     [SerializeField] S_FishData fishData;
     [SerializeField] S_Fisher playerFisher;
@@ -64,7 +65,7 @@ public class S_GameManager : MonoBehaviour
     public void HandleAddFish( string name, int tier)
     {
         aquarium.AddFish(name, tier);
-        GameObject fishPrefab = fishData.getFishPrefab(name, tier);
+        GameObject fishPrefab = fishData.GetFishPrefab(name, tier);
         aquariumVisuals.SpawnFish(fishPrefab);
     }
 
@@ -110,6 +111,7 @@ public class S_GameManager : MonoBehaviour
                 
                 //the result is returned and can be handled here
                 //TODO: add to autofish storage
+                storageManager.AddFish((result.name, result.tier));
                 Debug.Log( result.name + result.tier + " was caught by " + autoFisher.Stats.nameID);
             }, fishPoolData));
 

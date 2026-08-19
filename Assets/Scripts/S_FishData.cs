@@ -143,9 +143,13 @@ public class S_FishData : MonoBehaviour
         return fishDataLookup[nameID].sellPrice[tierValue];
     }
 
-    public GameObject getFishPrefab(string nameID, int tierValue)
+    public GameObject GetFishPrefab(string nameID, int tierValue)
     {
         return fishDataLookup[nameID].Prefabs[tierValue];
+    }
+    public Sprite GetFishSprite(string nameID, int tierValue)
+    {
+        return fishDataLookup[nameID].Sprites[tierValue];
     }
 
 

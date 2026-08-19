@@ -11,5 +11,7 @@ public class SO_Fish : ScriptableObject
      public int[] sellPrice;
 
     public GameObject[] Prefabs;
+
+    public  Sprite[] Sprites;
 }
 
