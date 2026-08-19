@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e123f7f782747f74cb5090c501434b77, type: 3}
   m_Name: AutoFisherStats
   m_EditorClassIdentifier: Assembly-CSharp::SO_Stats
-  nameID: AutoFisher1
-  luck: 1
-  fishSpeed: 3
+  nameID: Svante
+  luck: 0
+  fishSpeed: 5
   skill: 0
   Prefab: {fileID: 0}

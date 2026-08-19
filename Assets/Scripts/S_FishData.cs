@@ -9,8 +9,11 @@ using UnityEngine.InputSystem;
 public class S_FishData : MonoBehaviour
 {
     
-    [SerializeField] public SO_Fish[] rawData;
-    public Dictionary<string, SO_Fish> data = new();
+    [SerializeField] public SO_Fish[] rawFishData;
+    public Dictionary<string, SO_Fish> fishDataLookup = new();
+
+    [SerializeField] public SO_Stats[] rawAutoFisherData;
+     public Dictionary<string, SO_Stats> autoFisherDataLookup = new();
 
     
     public static S_FishData Instance { get; private set; }
@@ -42,17 +45,22 @@ public class S_FishData : MonoBehaviour
 
     void ImportData()
     {
-        foreach( SO_Fish fishSO in rawData)
+        foreach( SO_Fish fishSO in rawFishData)
         {
-            data[fishSO.nameID] = fishSO;
+            fishDataLookup[fishSO.nameID] = fishSO;
+        }
+        
+        foreach( SO_Stats autofisherSO in rawAutoFisherData)
+        {
+            autoFisherDataLookup[autofisherSO.nameID] = autofisherSO;
         }
     }
 
     void DebugData()
     {
-        foreach(var key in data.Keys)
+        foreach(var key in fishDataLookup.Keys)
         {
-            Debug.Log("Loaded data: " +  key + data[key]);
+            Debug.Log("Loaded data: " +  key + fishDataLookup[key]);
         }
     }
 
@@ -87,11 +95,11 @@ public class S_FishData : MonoBehaviour
     void CreateDifficultyPools()
     {
         // add fish into pools based on difficulty
-        foreach(var fish in data.Keys)
+        foreach(var fish in fishDataLookup.Keys)
         {
-            for(int i = 0; i < data[fish].tier.Length; i++)
+            for(int i = 0; i < fishDataLookup[fish].tier.Length; i++)
             {
-                int currentFishDifficulty = data[fish].difficulty[i];
+                int currentFishDifficulty = fishDataLookup[fish].difficulty[i];
 
                 //null check
                 if (!difficultyPools.ContainsKey(currentFishDifficulty))
@@ -99,10 +107,12 @@ public class S_FishData : MonoBehaviour
                     difficultyPools[i] = new List<(string nameID, int tier)>(); 
                 }
                 
-                difficultyPools[currentFishDifficulty].Add((fish, data[fish].tier[i]));
+                difficultyPools[currentFishDifficulty].Add((fish, fishDataLookup[fish].tier[i]));
             }
         }
     }
+
+      ///_____________GEt POOL DATA___________
 
     //GM will call at start, and when skill lvl updates
     public S_FishPoolData GetFishPool(int skillLvl)
@@ -122,19 +132,24 @@ public class S_FishData : MonoBehaviour
         return approvedDifficultyPools;
     } 
 
+      ///_____________GEt FISH DATA___________
+
     public float GetFishPassiveIncome(string nameID, int tierValue)
     {
-        return data[nameID].passiveIncome[tierValue];
+        return fishDataLookup[nameID].passiveIncome[tierValue];
     }
         public float GetFishSellPrice(string nameID, int tierValue)
     {
-        return data[nameID].sellPrice[tierValue];
+        return fishDataLookup[nameID].sellPrice[tierValue];
     }
 
     public GameObject getFishPrefab(string nameID, int tierValue)
     {
-        return data[nameID].Prefabs[tierValue];
+        return fishDataLookup[nameID].Prefabs[tierValue];
     }
+
+
+    ///_____________GEt AUTOFISHER DATA___________
     
 
     

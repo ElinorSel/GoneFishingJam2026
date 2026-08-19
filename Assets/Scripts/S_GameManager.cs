@@ -1,5 +1,8 @@
 using UnityEngine;
 using System;
+using Unity.VisualScripting;
+using System.Collections.Generic;
+using System.Collections;
 
 
 public class S_GameManager : MonoBehaviour
@@ -8,7 +11,8 @@ public class S_GameManager : MonoBehaviour
     [SerializeField] S_Aquarium aquarium;
     [SerializeField] S_AquariumVisuals aquariumVisuals;
     [SerializeField] S_FishData fishData;
-    [SerializeField] S_Fisher playerFisher; //change to fisher
+    [SerializeField] S_Fisher playerFisher;
+    [SerializeField] List<S_Fisher> autoFishers;
 
     private S_FishPoolData fishPoolData;
 
@@ -23,7 +27,7 @@ public class S_GameManager : MonoBehaviour
     {
         _money += value;
     }
-    public bool RemoveMoney(float value)
+    public bool TryBuy(float value)
     {
         if(value > _money)
         {
@@ -72,6 +76,47 @@ public class S_GameManager : MonoBehaviour
     public float GetCurrentPassiveIncome()
     {
        return aquarium.CurrentPassiveIncome;
+    }
+
+
+    //____Auto fishing_____
+
+    public bool TryBuyAutoFisher(float price, string nameID)
+    {
+        if (TryBuy(price))
+        {
+            AddAutoFisher(nameID);
+            return true;
+        }
+        else return false;
+    }
+
+    public void AddAutoFisher(string nameID)
+    {
+        S_Fisher newAutofisher = new();
+        newAutofisher.SetStats(S_FishData.Instance.autoFisherDataLookup[nameID]);
+        autoFishers.Add(newAutofisher);
+        StartCoroutine(AutoFish(newAutofisher));
+    }
+
+    private IEnumerator AutoFish(S_Fisher autoFisher)
+    {
+        while (true) //TODO: change to while game running?
+        {
+            StartCoroutine(autoFisher.FishAction((result) =>
+            {
+                // The code inside these brackets runs ONLY when the coroutine finishes
+                //Debug.Log($"Received Item: {result.name} at Tier: {result.tier}");
+                
+                //the result is returned and can be handled here
+                //TODO: add to autofish storage
+                Debug.Log( result.name + result.tier + " was caught by " + autoFisher.Stats.nameID);
+            }, fishPoolData));
+
+            yield return new WaitForSeconds(autoFisher.Stats.fishSpeed);
+        }
+
+        
     }
 
 

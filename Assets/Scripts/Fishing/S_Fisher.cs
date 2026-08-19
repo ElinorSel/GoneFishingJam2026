@@ -10,9 +10,16 @@ public class S_Fisher : MonoBehaviour
     [SerializeField] SO_Stats stats;
     public bool IsFishing {get; private set;}
 
+    public SO_Stats Stats => stats;
+
 
     private (string name, int tier) fish;
     private S_FishPoolData _fishPool;
+
+    public void SetStats(SO_Stats value)
+    {
+        stats = value;
+    }
     
     public (string name, int tier) FishActionTest()
     {
@@ -80,6 +87,5 @@ public class S_Fisher : MonoBehaviour
     }
     */
 
-    public SO_Stats Stats => stats;
 
 }
