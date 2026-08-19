@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2cc17c2938bf06b438cf1f3222bdd42c, type: 2}
+  - {fileID: 2100000, guid: ffef69c909ad58c48a18c5a8ab0150d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -123,7 +123,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1705291211609865296, guid: ab07245598a5df24b9d01cba69167ce6, type: 3}
       propertyPath: m_Name
-      value: Aborre I
+      value: Shrimp I
       objectReference: {fileID: 0}
     - target: {fileID: 1799439358237760387, guid: ab07245598a5df24b9d01cba69167ce6, type: 3}
       propertyPath: m_LocalScale.x

@@ -16,9 +16,9 @@ MonoBehaviour:
   tier: 000000000100000002000000
   difficulty: 000000000100000002000000
   passiveIncome:
-  - 0.1
-  - 2
-  - 15
+  - 0.5
+  - 1
+  - 5
   rarity: 000000000100000002000000
   sellPrice: 32000000640000002c010000
   Prefabs:

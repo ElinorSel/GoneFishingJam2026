@@ -38,7 +38,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5780113592107716798, guid: 1de17fcadb6698d4e8bd9f58f5f33b8b, type: 3}
       propertyPath: m_Name
-      value: Aborre III Variant
+      value: Shrimp III
       objectReference: {fileID: 0}
     - target: {fileID: 6456840279525218494, guid: 1de17fcadb6698d4e8bd9f58f5f33b8b, type: 3}
       propertyPath: m_Color.b
@@ -55,7 +55,7 @@ PrefabInstance:
     - target: {fileID: 6497314173613705043, guid: 1de17fcadb6698d4e8bd9f58f5f33b8b, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 9943a9a11ae880f43a1aea6ac9097601, type: 2}
+      objectReference: {fileID: 2100000, guid: ab288147adf2fea419f33c9938037061, type: 2}
     - target: {fileID: 6874071301371950957, guid: 1de17fcadb6698d4e8bd9f58f5f33b8b, type: 3}
       propertyPath: m_LocalScale.x
       value: 1

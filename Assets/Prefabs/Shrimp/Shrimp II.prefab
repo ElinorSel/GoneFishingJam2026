@@ -123,10 +123,10 @@ PrefabInstance:
     - target: {fileID: 7309764940379144900, guid: 5a3f211b56e69f242bf8fd8b00e4228c, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 5de2d14de529c1f4abdd3be99abbfd68, type: 2}
+      objectReference: {fileID: 2100000, guid: dc7084814d74cca4f8c91a1ce9293803, type: 2}
     - target: {fileID: 8029229966350652713, guid: 5a3f211b56e69f242bf8fd8b00e4228c, type: 3}
       propertyPath: m_Name
-      value: Aborre II Variant
+      value: Shrimp II
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

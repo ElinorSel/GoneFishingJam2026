@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SO_Fish
   nameID: Mort
   tier: 000000000100000002000000
-  difficulty: 010000000200000002000000
+  difficulty: 000000000200000002000000
   passiveIncome:
   - 0.1
   - 0.2
