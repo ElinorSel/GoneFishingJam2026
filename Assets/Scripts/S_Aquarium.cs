@@ -23,21 +23,28 @@ public class S_Aquarium : MonoBehaviour
      private Dictionary<(string nameID, int tier), int> _fishCount = new();
      private List<S_Fish> _fishes = new();
 
+    public float CurrentPassiveIncome {get; private set;}
+
     void Start()
     {
+        CurrentPassiveIncome  = 0;
         StartCoroutine(PassiveIncome());
     }
 
     private IEnumerator PassiveIncome()
     {
+        
         while(true) //TODO: only start when game is ready to start?
         {
+            float income = 0;
             foreach((string nameID, int tier) fish in _fishCount.Keys)
-        {
-            gameManager.AddMoney(fishData.GetFishValue(fish.nameID,fish.tier));
-        }
-        //Debug.Log("Current money" + gameManager.Money);
-        yield return new WaitForSeconds(_passiveIncomeSpeed);
+            {
+                income += fishData.GetFishPassiveIncome(fish.nameID,fish.tier);
+                gameManager.AddMoney(fishData.GetFishPassiveIncome(fish.nameID,fish.tier));
+            }
+            //Debug.Log("Current money" + gameManager.Money);
+            CurrentPassiveIncome = income;
+            yield return new WaitForSeconds(_passiveIncomeSpeed);
         }
        
     }
@@ -46,8 +53,8 @@ public class S_Aquarium : MonoBehaviour
     {
         foreach((string nameID, int tier) fish in _fishCount.Keys)
         {
-            gameManager.AddMoney(fishData.GetFishValue(fish.nameID,fish.tier));
-            Debug.Log(fishData.GetFishValue(fish.nameID,fish.tier));
+            gameManager.AddMoney(fishData.GetFishPassiveIncome(fish.nameID,fish.tier));
+            Debug.Log(fishData.GetFishPassiveIncome(fish.nameID,fish.tier));
         }
         
 
@@ -67,30 +74,19 @@ public class S_Aquarium : MonoBehaviour
         MergeCheck(nameID, tier);
 
 
-        /*
+        
         foreach(var key in _fishCount.Keys)
         {
             Debug.Log( key.nameID + " tier " + key.tier + " Count: " +_fishCount[key]);
         }
         Debug.Log("__________________________________");
 
-        */
+        
         
         
     }
 
 
-/*
-
-    void SpawnFish()
-    {
-        float spawnX = Random.Range(spawnMinX, spawnMaxX);
-        float spawnY = Random.Range(spawnMinY, spawnMaxY);
-    
-        Instantiate(fishData._aborrePrefabs[0], new Vector3(spawnX,spawnY,spawnZ), fishData._aborrePrefabs[0].transform.rotation);
-
-    } 
-*/
     void MergeCheck(string nameID, int tier)
     {
         //null check

@@ -8,7 +8,10 @@ public class SO_Fish : ScriptableObject
     public int[] difficulty;
     public float[] passiveIncome;
     public int[] rarity;
+     public int[] sellPrice;
 
     public GameObject[] Prefabs;
+
+    public  Sprite[] Sprites;
 }
 

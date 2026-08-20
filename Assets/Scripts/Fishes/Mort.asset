@@ -14,13 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SO_Fish
   nameID: Mort
   tier: 000000000100000002000000
-  difficulty: 010000000200000002000000
+  difficulty: 000000000200000002000000
   passiveIncome:
   - 0.1
   - 0.2
   - 0.3
   rarity: 000000000000000000000000
+  sellPrice: c80000002c01000090010000
   Prefabs:
   - {fileID: 8029229966350652713, guid: 5a3f211b56e69f242bf8fd8b00e4228c, type: 3}
   - {fileID: 5780113592107716798, guid: 1de17fcadb6698d4e8bd9f58f5f33b8b, type: 3}
   - {fileID: 2788924621761803021, guid: 52cf218bf1b743f4a931909778e7c498, type: 3}
+  Sprites:
+  - {fileID: 21300000, guid: ccc67a07ce007714aaf911f19d8e5bca, type: 3}
+  - {fileID: 21300000, guid: ccc67a07ce007714aaf911f19d8e5bca, type: 3}
+  - {fileID: 21300000, guid: ccc67a07ce007714aaf911f19d8e5bca, type: 3}
