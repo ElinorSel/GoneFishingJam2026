@@ -9,13 +9,12 @@ public class S_StorageBox : MonoBehaviour
     public  bool isEmpty  {get; private set;} = true;
     
     [SerializeField] GameObject fishSprite;
+    [SerializeField] Animator m_Animator;
     Image fishSpriteImage;
 
-    Animator m_Animator;
 
     void Start()
     {
-        m_Animator = gameObject.GetComponent<Animator>();
         fishSpriteImage = fishSprite.GetComponent<Image>();
     }
     public void AddFish((string nameID, int tier) fish)

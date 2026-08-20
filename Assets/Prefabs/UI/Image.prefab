@@ -91,6 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_StorageBox
   fishSprite: {fileID: 6563675154028309775}
+  m_Animator: {fileID: 5858681815363071696}
 --- !u!95 &5858681815363071696
 Animator:
   serializedVersion: 7
