@@ -68,6 +68,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   interactionUI: {fileID: 1651864599853401399}
   interactionText: {fileID: 6273527260236637997}
+  gameManager: {fileID: 3416187699680561915}
 --- !u!1 &834181766940525124
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,7 +336,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Interact
+  m_text: 'press f to
 
 '
   m_isRightToLeft: 0

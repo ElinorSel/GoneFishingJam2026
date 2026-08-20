@@ -506,6 +506,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1651864599853401399, guid: f4f5a58042c70514ab7f8136057c2e44, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1837022272608948257, guid: f4f5a58042c70514ab7f8136057c2e44, type: 3}
       propertyPath: m_Name
       value: Managers
@@ -566,6 +570,10 @@ PrefabInstance:
     - target: {fileID: 3832134170568720126, guid: c9f288086c4d3904fa7518a8f8dbb804, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832134170568720126, guid: c9f288086c4d3904fa7518a8f8dbb804, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8961312332114328201, guid: c9f288086c4d3904fa7518a8f8dbb804, type: 3}
       propertyPath: m_Pivot.x

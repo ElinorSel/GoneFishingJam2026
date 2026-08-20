@@ -16,6 +16,7 @@ public class S_GameManager : MonoBehaviour
     [SerializeField] List<S_Fisher> autoFishers;
 
     private S_FishPoolData fishPoolData;
+    public bool PlayerIsFishing {get; private set;}
 
     
     public float Money => _money;
@@ -45,25 +46,23 @@ public class S_GameManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void PlayerFish()
     {
+        PlayerIsFishing = true;
         StartCoroutine(playerFisher.FishAction((result) =>
         {
             // The code inside these brackets runs ONLY when the coroutine finishes
             //Debug.Log($"Received Item: {result.name} at Tier: {result.tier}");
-            
             //the result is returned and can be handled here
+            
             OnFishCaught.Invoke(result.name, result.tier);
         }, fishPoolData));
     }
 
     public void HandleAddFish( string name, int tier)
     {
+        PlayerIsFishing = false; // cant fish untill you chose an option in the ui
         aquarium.AddFish(name, tier);
         GameObject fishPrefab = fishData.GetFishPrefab(name, tier);
         aquariumVisuals.SpawnFish(fishPrefab);
@@ -71,6 +70,7 @@ public class S_GameManager : MonoBehaviour
 
     public void HandleSellFish( string name, int tier)
     {
+        PlayerIsFishing = false; // cant fish untill you chose an option in the ui
         AddMoney(fishData.GetFishSellPrice(name, tier));
     }
 
