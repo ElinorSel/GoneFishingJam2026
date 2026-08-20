@@ -3,6 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using System;
 using System.Runtime.CompilerServices;
+using System.Runtime.Serialization;
 
 public class S_StorageManager : MonoBehaviour
 {
@@ -11,9 +12,12 @@ public class S_StorageManager : MonoBehaviour
     public S_StorageBox[] StorageBoxes {get; private set;}
     [SerializeField] int startUnlockedBoxes;
 
+    [SerializeField] S_GameManager gameManager;
+
 
     public event Action<int> OnBoxUnlocked;
     public event Action<int> OnFishAdded;
+     public event Action<int> OnFishRemoved;
 
 
     void Awake()
@@ -73,5 +77,29 @@ public class S_StorageManager : MonoBehaviour
         }
         
     }
+
+    public void RemoveAllFish()
+    {
+        for(int i = 0; i< StorageBoxes.Length; i++)
+        {
+            (string name, int tier) fish = StorageBoxes[i]._fish;
+            gameManager.HandleSellFish(fish.name, fish.tier);
+            StorageBoxes[i].RemoveFish();
+            OnFishRemoved?.Invoke(i);
+        }
+    }
+
+        public void KeepAllFish()
+    {
+        for(int i = 0; i< StorageBoxes.Length; i++)
+        {
+            (string name, int tier) fish = StorageBoxes[i]._fish;
+            gameManager.HandleAddFish(fish.name, fish.tier);
+            StorageBoxes[i].RemoveFish();
+            OnFishRemoved?.Invoke(i);
+        }
+    }
+
+
 }
 

@@ -23,6 +23,7 @@ public class S_StorageUI : MonoBehaviour
         ReadState();
         storageManager.OnFishAdded += HandleFishAdded;
         storageManager.OnBoxUnlocked += HandleBoxUnlocked;
+        storageManager.OnFishRemoved += HandleRemoveFish;
     }
 
     void OnDisable()
@@ -52,6 +53,8 @@ public class S_StorageUI : MonoBehaviour
     public void HandleRemoveFish(int boxIndex)
     {
         //storageBoxVisuals[boxIndex].FishSprite.SetActive(false);
+        GameObject fishSpriteGO = storageBoxVisualsGO[boxIndex];
+        fishSpriteGO.SetActive(false);
     }
 
     void ReadState()
@@ -69,6 +72,11 @@ public class S_StorageUI : MonoBehaviour
                 fishSpriteGO.SetActive(true);
                 Image fishSpriteImage = fishSpriteGO.GetComponent<Image>();
                 fishSpriteImage.sprite = S_FishData.Instance.GetFishSprite( fish.nameID, fish.tier);
+            }
+            else if (storageManager.StorageBoxes[i].isEmpty)
+            {
+                GameObject fishSpriteGO = storageBoxVisualsGO[i];
+                fishSpriteGO.SetActive(false);
             }
 
             if (storageManager.StorageBoxes[i].isUnlocked)
