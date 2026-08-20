@@ -14,6 +14,9 @@ public class S_GameManager : MonoBehaviour
     [SerializeField] S_FishData fishData;
     [SerializeField] S_Fisher playerFisher;
     [SerializeField] List<S_Fisher> autoFishers;
+    [SerializeField] GameObject autoFisherParent;
+    [SerializeField] GameObject autoFisherPrefab;
+
 
     private S_FishPoolData fishPoolData;
     public bool PlayerIsFishing {get; private set;}
@@ -94,7 +97,9 @@ public class S_GameManager : MonoBehaviour
 
     public void AddAutoFisher(string nameID)
     {
-        S_Fisher newAutofisher = new();
+        
+        GameObject newAutofisherGO = Instantiate(autoFisherPrefab, autoFisherParent.transform);
+        S_Fisher newAutofisher =  newAutofisherGO.GetComponent<S_Fisher>();
         newAutofisher.SetStats(S_FishData.Instance.autoFisherDataLookup[nameID]);
         autoFishers.Add(newAutofisher);
         StartCoroutine(AutoFish(newAutofisher));
