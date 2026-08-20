@@ -12,7 +12,7 @@ public class S_FishingZone : MonoBehaviour
 
     void Start()
     {
-        interactionText.text += " fish";
+        interactionText.text = "press f to fish";
         _interactAction = InputSystem.actions.FindAction("Interact1");
     }
     void OnTriggerEnter(Collider other)
