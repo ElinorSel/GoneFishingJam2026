@@ -104,14 +104,13 @@ public class S_FishData : MonoBehaviour
                 //null check
                 if (!difficultyPools.ContainsKey(currentFishDifficulty))
                 {
-                    difficultyPools[currentFishDifficulty] = new List<(string nameID, int tier)>(); 
+                    difficultyPools[i] = new List<(string nameID, int tier)>(); 
                 }
                 
                 difficultyPools[currentFishDifficulty].Add((fish, fishDataLookup[fish].tier[i]));
             }
         }
     }
-    
 
       ///_____________GEt POOL DATA___________
 
