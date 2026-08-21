@@ -17,6 +17,8 @@ public class S_GameManager : MonoBehaviour
     [SerializeField] GameObject autoFisherParent;
     [SerializeField] GameObject autoFisherPrefab;
 
+    public S_Fisher PlayerFisher => playerFisher;
+
 
     private S_FishPoolData fishPoolData;
     public bool PlayerIsFishing {get; private set;}
@@ -125,6 +127,16 @@ public class S_GameManager : MonoBehaviour
 
         
     }
+
+    public void IncreaseSkillLvl()
+    {
+        playerFisher.Stats.skill++;
+        Debug.Log("Player Skill is" + playerFisher.Stats.skill);
+        fishPoolData = fishData.GetFishPool(playerFisher.Stats.skill);
+
+    }
+
+
 
 
     //TODO: trigger autofishers from here

@@ -82,10 +82,14 @@ public class S_StorageManager : MonoBehaviour
     {
         for(int i = 0; i< StorageBoxes.Length; i++)
         {
-            (string name, int tier) fish = StorageBoxes[i]._fish;
-            gameManager.HandleSellFish(fish.name, fish.tier);
-            StorageBoxes[i].RemoveFish();
-            OnFishRemoved?.Invoke(i);
+            if (!StorageBoxes[i].isEmpty)
+            {
+                (string name, int tier) fish = StorageBoxes[i]._fish;
+                gameManager.HandleSellFish(fish.name, fish.tier);
+                StorageBoxes[i].RemoveFish();
+                OnFishRemoved?.Invoke(i);
+            }
+
         }
     }
 

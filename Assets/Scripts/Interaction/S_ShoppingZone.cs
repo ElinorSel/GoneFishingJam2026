@@ -12,6 +12,7 @@ public class S_ShoppingZone : MonoBehaviour
     [SerializeField] TextMeshProUGUI interactionText;
     [SerializeField] S_ShopManager shopManager;
     [SerializeField] Button storageSlotButton;
+    [SerializeField] Button skillLvlButton;
     [SerializeField] S_GameManager gameManager;
     private InputAction _interactAction;
     private bool inZone;
@@ -41,6 +42,7 @@ public class S_ShoppingZone : MonoBehaviour
     {
         interactionUI.SetActive(!shopUI.activeSelf);
         UICheckStorageUnlock();
+        UISkillCheck();
 
     }
     void OnTriggerExit(Collider other)
@@ -59,6 +61,18 @@ public class S_ShoppingZone : MonoBehaviour
         else
         {
             storageSlotButton.interactable = true;
+        }
+    
+    }
+    void UISkillCheck()
+    {
+        if(shopManager.skillUpgradePrice > gameManager.Money)
+        {
+            skillLvlButton.interactable = false;
+        }
+        else
+        {
+            skillLvlButton.interactable = true;
         }
     }
 }

@@ -6,6 +6,7 @@ public class S_ShopManager : MonoBehaviour
     [SerializeField] S_GameManager gameManager;
     [SerializeField] S_StorageManager storageManager;
     [SerializeField] int storageSlotBuys = 10;
+    public float skillUpgradePrice = 500;
     public float storageSlotPrice = 50f;
     int boxsBought = 0;
 
@@ -24,5 +25,16 @@ public class S_ShopManager : MonoBehaviour
 
     }
 
+    public void UpgradeSkillLevel()
+    {
+        if (gameManager.PlayerFisher.Stats.skill < 2)
+        {
+            if (gameManager.TryBuy(skillUpgradePrice))
+            {
+                gameManager.IncreaseSkillLvl();
+                skillUpgradePrice += 500f;
+            }
+        }
+    }
 
 }
