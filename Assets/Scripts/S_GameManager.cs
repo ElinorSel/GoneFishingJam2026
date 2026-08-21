@@ -142,13 +142,13 @@ public class S_GameManager : MonoBehaviour
     }
         public void IncreaseSpeed()
     {
-        if (playerFisher.Stats.fishSpeed - 0.5f >= 0.5f)
+        if (playerFisher.Stats.fishSpeed - 0.5f >= 0f)
         {
             playerFisher.Stats.fishSpeed -= 0.5f;
         }
         else
         {
-            Debug.Log("WARNING fishing speed cannot be negative");
+            Debug.Log("WARNING fishing speed cannot be negative. Speed is" + playerFisher.Stats.fishSpeed + "Tried to set to" );
         }
         
     }

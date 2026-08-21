@@ -31,7 +31,7 @@ public class S_ShoppingZone : MonoBehaviour
     [SerializeField] TextMeshProUGUI storagetxt;
 
 
-    
+
     private InputAction _interactAction;
     private bool inZone;
 
@@ -62,12 +62,69 @@ public class S_ShoppingZone : MonoBehaviour
     void OnTriggerStay()
     {
         interactionUI.SetActive(!shopUI.activeSelf);
-        UICheckStorageUnlock();
-        UISkillCheck();
-        Autofish1Check();
-        Autofish2Check();
-        UIluckCheck();
-        UISpeedCheck();
+        
+        
+        if (shopManager.storagedone != true)
+        {
+            UICheckStorageUnlock();
+            
+        }
+        else
+        {
+            storageSlotButton.interactable = false;
+        }
+
+        if (shopManager.skilldone != true)
+        {
+             UISkillCheck();
+            
+        }
+        else
+        {
+            skillLvlButton.interactable = false;
+        }
+        
+       
+        if (shopManager.autofish1Done != true)
+        {
+            Autofish1Check();
+            
+        }
+        else
+        {
+            autofisher1.interactable = false;
+        }
+        if (!shopManager.autofish1Done)
+        {
+            Autofish2Check();
+        }
+        else
+        {
+            autofisher2.interactable = false;
+        }
+
+                if (shopManager.luckdone != true)
+        {
+             UIluckCheck();
+            
+        }
+        else
+        {
+            luckLvlButton.interactable = false;
+        }
+        
+                if (shopManager.speeddone != true)
+        {
+             UISpeedCheck();
+            
+        }
+        else
+        {
+            speedButton.interactable = false;
+        }
+        
+       
+       
 
     }
     void OnTriggerExit(Collider other)
@@ -79,6 +136,7 @@ public class S_ShoppingZone : MonoBehaviour
 
     void UICheckStorageUnlock()
     {
+        storagetxt.text = shopManager.storageSlotPrice.ToString();
         if(shopManager.storageSlotPrice > gameManager.Money)
         {
             storageSlotButton.interactable = false;
@@ -91,6 +149,7 @@ public class S_ShoppingZone : MonoBehaviour
     }
     void UISkillCheck()
     {
+        skilltxt.text = shopManager.skillUpgradePrice.ToString();
         if(shopManager.skillUpgradePrice > gameManager.Money)
         {
             skillLvlButton.interactable = false;
@@ -102,6 +161,7 @@ public class S_ShoppingZone : MonoBehaviour
     }
      void UIluckCheck()
     {
+        lucktxt.text = shopManager.luckUpgradePrice.ToString();
         if(shopManager.luckUpgradePrice > gameManager.Money)
         {
             luckLvlButton.interactable = false;
@@ -113,6 +173,7 @@ public class S_ShoppingZone : MonoBehaviour
     }
          void UISpeedCheck()
     {
+        speedtxt.text = shopManager.speedUpgradePrice.ToString();
         if(shopManager.speedUpgradePrice > gameManager.Money)
         {
             speedButton.interactable = false;
@@ -124,6 +185,7 @@ public class S_ShoppingZone : MonoBehaviour
     }
         void Autofish1Check()
     {
+        autofisher1txt.text = shopManager.autoFisher1Price.ToString();
         if(shopManager.skillUpgradePrice > gameManager.Money)
         {
             autofisher1.interactable = false;
@@ -135,6 +197,7 @@ public class S_ShoppingZone : MonoBehaviour
     }
             void Autofish2Check()
     {
+        autofisher2txt.text = shopManager.autoFisher2Price.ToString();
         if(shopManager.skillUpgradePrice > gameManager.Money)
         {
             autofisher2.interactable = false;

@@ -18,6 +18,13 @@ public class S_ShopManager : MonoBehaviour
     int boxsBought = 0;
     int speedIncreasesBought = 0;
 
+    public bool autofish1Done = false;
+    public bool autofish2Done = false;
+      public bool speeddone = false;
+        public bool luckdone = false;
+          public bool skilldone = false;
+          public bool storagedone = false;
+
 
 
 
@@ -35,6 +42,11 @@ public class S_ShopManager : MonoBehaviour
             }
         }
 
+        if (boxsBought == 10)
+        {
+            storagedone = true;
+        }
+
     }
         public void BuyAutoFisher1()
     {
@@ -42,6 +54,7 @@ public class S_ShopManager : MonoBehaviour
             {
                 gameManager.AddAutoFisher("Svante");
                 //storageSlotPrice += 100f;
+                autofish1Done = true;
             }
     }
         public void BuyAutoFisher2()
@@ -50,6 +63,7 @@ public class S_ShopManager : MonoBehaviour
             {
                 gameManager.AddAutoFisher("Fjodor");
                 //storageSlotPrice += 100f;
+                autofish2Done = true;
             }
     }
 
@@ -64,6 +78,10 @@ public class S_ShopManager : MonoBehaviour
                 skillUpgradePrice += 500f;
             }
         }
+        if (gameManager.PlayerFisher.Stats.skill == 2)
+        {
+            skilldone = true;
+        }
     }
 
         public void UpgradeLuckLevel()
@@ -75,6 +93,11 @@ public class S_ShopManager : MonoBehaviour
                 gameManager.IncreaseLuckLvl();
                 luckUpgradePrice += 1000f;
             }
+        }
+
+        if (gameManager.PlayerFisher.Stats.luck == 2)
+        {
+            luckdone = true;
         }
     }
     
@@ -88,6 +111,11 @@ public class S_ShopManager : MonoBehaviour
                 speedIncreasesBought++;
                 speedUpgradePrice += 80f;
             }
+        }
+
+        if (speedIncreasesBought == 3)
+        {
+            speeddone = true;
         }
     }
 
