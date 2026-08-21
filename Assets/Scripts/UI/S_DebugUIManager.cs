@@ -18,7 +18,7 @@ public class S_DebugUIManager : MonoBehaviour
     void Update()
     {
         moneyLable.text = gameManager.Money.ToString();
-        moneyLable.ForceMeshUpdate();
         passiveIncomeLable.text = gameManager.GetCurrentPassiveIncome().ToString() + " per second";
+        moneyLable.ForceMeshUpdate();
     }
 }
