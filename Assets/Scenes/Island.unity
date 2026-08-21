@@ -1607,6 +1607,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -13.765
       objectReference: {fileID: 0}
+    - target: {fileID: 6416100533997420616, guid: f4f5a58042c70514ab7f8136057c2e44, type: 3}
+      propertyPath: caugtfishImage
+      value: 
+      objectReference: {fileID: 1736290735}
     - target: {fileID: 6428208720458308055, guid: f4f5a58042c70514ab7f8136057c2e44, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.59831
@@ -3567,6 +3571,17 @@ Transform:
   - {fileID: 494977309}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 18, y: 0, z: 0}
+--- !u!114 &1736290735 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3220777254312370304, guid: f4f5a58042c70514ab7f8136057c2e44, type: 3}
+  m_PrefabInstance: {fileID: 463614328}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &1800422400
 GameObject:
   m_ObjectHideFlags: 0
