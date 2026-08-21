@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c86709bdb28a4d248a0319b4eb9ced81, type: 3}
+  m_Name: stromming
+  m_EditorClassIdentifier: Assembly-CSharp::SO_Fish
+  nameID: Stromming
+  tier: 000000000100000002000000
+  difficulty: 000000000100000002000000
+  passiveIncome:
+  - 5
+  - 6
+  - 10
+  rarity: 000000000100000002000000
+  sellPrice: 96000000af000000c8000000
+  Prefabs:
+  - {fileID: 8029229966350652713, guid: 3b050aba9b544b94db9cb47f7c93ae0e, type: 3}
+  - {fileID: 2788924621761803021, guid: 8acee97c9dc3f6e44ac18d2930e6af78, type: 3}
+  - {fileID: 5780113592107716798, guid: 53a98c6ca403f9e4a993a06edcfb2eb2, type: 3}
+  Sprites:
+  - {fileID: 21300000, guid: 5fb7e02dfdb01c8419bd998ff9a08824, type: 3}
+  - {fileID: 21300000, guid: ee729d7ba6d4f19489caea288d0a7b8c, type: 3}
+  - {fileID: 21300000, guid: ee729d7ba6d4f19489caea288d0a7b8c, type: 3}
