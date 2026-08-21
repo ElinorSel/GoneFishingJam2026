@@ -127,15 +127,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1799439358237760387, guid: ab07245598a5df24b9d01cba69167ce6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1799439358237760387, guid: ab07245598a5df24b9d01cba69167ce6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1799439358237760387, guid: ab07245598a5df24b9d01cba69167ce6, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1799439358237760387, guid: ab07245598a5df24b9d01cba69167ce6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -177,6 +177,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1799439358237760387, guid: ab07245598a5df24b9d01cba69167ce6, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4195769336002268560, guid: ab07245598a5df24b9d01cba69167ce6, type: 3}
       propertyPath: name
       value: Aborre
@@ -192,22 +196,6 @@ PrefabInstance:
     - target: {fileID: 4195769336002268560, guid: ab07245598a5df24b9d01cba69167ce6, type: 3}
       propertyPath: passiveIncome
       value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6356165542452547047, guid: ab07245598a5df24b9d01cba69167ce6, type: 3}
-      propertyPath: boundaryMaxX
-      value: 7.58
-      objectReference: {fileID: 0}
-    - target: {fileID: 6356165542452547047, guid: ab07245598a5df24b9d01cba69167ce6, type: 3}
-      propertyPath: boundaryMaxY
-      value: 11.88
-      objectReference: {fileID: 0}
-    - target: {fileID: 6356165542452547047, guid: ab07245598a5df24b9d01cba69167ce6, type: 3}
-      propertyPath: boundaryMinX
-      value: -6.84
-      objectReference: {fileID: 0}
-    - target: {fileID: 6356165542452547047, guid: ab07245598a5df24b9d01cba69167ce6, type: 3}
-      propertyPath: boundaryMinY
-      value: 0.81
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4195769336002268560, guid: ab07245598a5df24b9d01cba69167ce6, type: 3}
