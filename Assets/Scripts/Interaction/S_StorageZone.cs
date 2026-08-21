@@ -14,11 +14,12 @@ public class S_StorageZone : MonoBehaviour
 
         void Start()
     {
-        interactionText.text = "press f to open storage";
+       
         _interactAction = InputSystem.actions.FindAction("Interact1");
     }
     void OnTriggerEnter(Collider other)
     {
+        interactionText.text = "press f to open storage";
         interactionUI.SetActive(true);
         inZone = true;
     }
