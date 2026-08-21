@@ -100,12 +100,23 @@ public class S_GameManager : MonoBehaviour
     public void AddAutoFisher(string nameID)
     {
         
-        GameObject newAutofisherGO = Instantiate(autoFisherPrefab, autoFisherParent.transform);
+        GameObject newAutofisherGO = Instantiate(autoFisherPrefab);
         S_Fisher newAutofisher =  newAutofisherGO.GetComponent<S_Fisher>();
+
+        if (nameID == "Svante")
+        {
+            newAutofisherGO.transform.position = new Vector3(7.880f,0.479f,-2.48f);
+        }
+        if (nameID == "Fjodor")
+        {
+            newAutofisherGO.transform.position = new Vector3(-7.9f,0.47f,-2.48f);
+        }
+
         newAutofisher.SetStats(S_FishData.Instance.autoFisherDataLookup[nameID]);
         autoFishers.Add(newAutofisher);
         StartCoroutine(AutoFish(newAutofisher));
     }
+    
 
     private IEnumerator AutoFish(S_Fisher autoFisher)
     {
