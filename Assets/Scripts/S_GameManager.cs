@@ -136,6 +136,23 @@ public class S_GameManager : MonoBehaviour
 
     }
 
+    public void IncreaseLuckLvl()
+    {
+        playerFisher.Stats.luck++;
+    }
+        public void IncreaseSpeed()
+    {
+        if (playerFisher.Stats.fishSpeed - 0.5f >= 0.5f)
+        {
+            playerFisher.Stats.fishSpeed -= 0.5f;
+        }
+        else
+        {
+            Debug.Log("WARNING fishing speed cannot be negative");
+        }
+        
+    }
+
 
 
 

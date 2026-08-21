@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e123f7f782747f74cb5090c501434b77, type: 3}
-  m_Name: AutoFisherStats
+  m_Name: AF_Svante
   m_EditorClassIdentifier: Assembly-CSharp::SO_Stats
   nameID: Svante
   luck: 0
-  fishSpeed: 5
+  fishSpeed: 10
   skill: 0
-  Prefab: {fileID: 0}
+  Prefab: {fileID: 3759081962312427856, guid: 4777eab7874735646aa8f2b26092dacf, type: 3}

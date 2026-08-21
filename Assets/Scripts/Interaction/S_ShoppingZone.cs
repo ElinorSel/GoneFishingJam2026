@@ -13,6 +13,10 @@ public class S_ShoppingZone : MonoBehaviour
     [SerializeField] S_ShopManager shopManager;
     [SerializeField] Button storageSlotButton;
     [SerializeField] Button skillLvlButton;
+    [SerializeField] Button luckLvlButton;
+    [SerializeField] Button speedButton;
+     [SerializeField] Button autofisher1;
+     [SerializeField] Button autofisher2;
     [SerializeField] S_GameManager gameManager;
     private InputAction _interactAction;
     private bool inZone;
@@ -43,6 +47,10 @@ public class S_ShoppingZone : MonoBehaviour
         interactionUI.SetActive(!shopUI.activeSelf);
         UICheckStorageUnlock();
         UISkillCheck();
+        Autofish1Check();
+        Autofish2Check();
+        UIluckCheck();
+        UISpeedCheck();
 
     }
     void OnTriggerExit(Collider other)
@@ -73,6 +81,50 @@ public class S_ShoppingZone : MonoBehaviour
         else
         {
             skillLvlButton.interactable = true;
+        }
+    }
+     void UIluckCheck()
+    {
+        if(shopManager.luckUpgradePrice > gameManager.Money)
+        {
+            luckLvlButton.interactable = false;
+        }
+        else
+        {
+            luckLvlButton.interactable = true;
+        }
+    }
+         void UISpeedCheck()
+    {
+        if(shopManager.speedUpgradePrice > gameManager.Money)
+        {
+            speedButton.interactable = false;
+        }
+        else
+        {
+            speedButton.interactable = true;
+        }
+    }
+        void Autofish1Check()
+    {
+        if(shopManager.skillUpgradePrice > gameManager.Money)
+        {
+            autofisher1.interactable = false;
+        }
+        else
+        {
+            autofisher1.interactable = true;
+        }
+    }
+            void Autofish2Check()
+    {
+        if(shopManager.skillUpgradePrice > gameManager.Money)
+        {
+            autofisher2.interactable = false;
+        }
+        else
+        {
+            autofisher2.interactable = true;
         }
     }
 }
