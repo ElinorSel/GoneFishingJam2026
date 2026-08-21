@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class S_ShoppingZone : MonoBehaviour
 {
@@ -9,7 +10,9 @@ public class S_ShoppingZone : MonoBehaviour
     [SerializeField] GameObject interactionUI;
     [SerializeField] GameObject shopUI;
     [SerializeField] TextMeshProUGUI interactionText;
-    //[SerializeField] S_GameManager gameManager;
+    [SerializeField] S_ShopManager shopManager;
+    [SerializeField] Button storageSlotButton;
+    [SerializeField] S_GameManager gameManager;
     private InputAction _interactAction;
     private bool inZone;
     void Start()
@@ -37,11 +40,25 @@ public class S_ShoppingZone : MonoBehaviour
     void OnTriggerStay()
     {
         interactionUI.SetActive(!shopUI.activeSelf);
+        UICheckStorageUnlock();
+
     }
     void OnTriggerExit(Collider other)
     {
         interactionUI.SetActive(false);
         shopUI.SetActive(false);
         inZone = false;
+    }
+
+    void UICheckStorageUnlock()
+    {
+        if(shopManager.storageSlotPrice > gameManager.Money)
+        {
+            storageSlotButton.interactable = false;
+        }
+        else
+        {
+            storageSlotButton.interactable = true;
+        }
     }
 }
