@@ -1051,6 +1051,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -139.4623
       objectReference: {fileID: 0}
+    - target: {fileID: 2193338812593678362, guid: f4f5a58042c70514ab7f8136057c2e44, type: 3}
+      propertyPath: rawFishData.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193338812593678362, guid: f4f5a58042c70514ab7f8136057c2e44, type: 3}
+      propertyPath: 'rawFishData.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 8009911fdb5606344b8d936ba93a7980, type: 2}
+    - target: {fileID: 2193338812593678362, guid: f4f5a58042c70514ab7f8136057c2e44, type: 3}
+      propertyPath: 'rawFishData.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: d31793922b4b98b4cb88fdfeb2f150be, type: 2}
+    - target: {fileID: 2193338812593678362, guid: f4f5a58042c70514ab7f8136057c2e44, type: 3}
+      propertyPath: rawAutoFisherData.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193338812593678362, guid: f4f5a58042c70514ab7f8136057c2e44, type: 3}
+      propertyPath: 'rawAutoFisherData.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 63c8e179e2b19664294f425c795708b3, type: 2}
     - target: {fileID: 2605798201428674986, guid: f4f5a58042c70514ab7f8136057c2e44, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
