@@ -44,7 +44,7 @@ public class S_ShoppingZone : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-         interactionText.text = "press f to Shop";
+         interactionText.text = "Press F to Shop";
         interactionUI.SetActive(true);
         inZone = true;
     }

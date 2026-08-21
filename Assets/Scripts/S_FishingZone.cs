@@ -17,7 +17,7 @@ public class S_FishingZone : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        interactionText.text = "press f to fish";
+        interactionText.text = "Press F to fish";
         interactionUI.SetActive(true);
         inZone = true;
     }

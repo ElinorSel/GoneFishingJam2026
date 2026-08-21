@@ -19,7 +19,7 @@ public class S_StorageZone : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        interactionText.text = "press f to open storage";
+        interactionText.text = "Press F to open storage";
         interactionUI.SetActive(true);
         inZone = true;
     }
