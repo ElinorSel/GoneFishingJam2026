@@ -16,7 +16,7 @@ public class S_DebugUIManager : MonoBehaviour
 
     void Update()
     {
-        moneyLable.text = "Kaviar: " + gameManager.Money.ToString();
-        passiveIncomeLable.text = "Kaviar Production: " + gameManager.GetCurrentPassiveIncome().ToString();
+        moneyLable.text = gameManager.Money.ToString();
+        passiveIncomeLable.text = gameManager.GetCurrentPassiveIncome().ToString() + " per second";
     }
 }
