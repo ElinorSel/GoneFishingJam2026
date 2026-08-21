@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerStats
   m_EditorClassIdentifier: Assembly-CSharp::SO_Stats
   nameID: Player
-  luck: 1
+  luck: 0
   fishSpeed: 3
   skill: 0
   Prefab: {fileID: 0}

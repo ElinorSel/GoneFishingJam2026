@@ -113,7 +113,7 @@ public class S_ShopManager : MonoBehaviour
             }
         }
 
-        if (speedIncreasesBought == 3)
+        if (speedIncreasesBought == 4)
         {
             speeddone = true;
         }
