@@ -44,8 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26cb88b5c77074c4385078de2ecdf977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_FishMovement
-  boundaryMaxX: 0
-  boundaryMinX: 0
-  boundaryMinY: 0
-  boundaryMaxY: 0
-  boundaryZ: 10.4
+  boundaryMaxX: 4.64
+  boundaryMinX: -4.47
+  boundaryMinY: 0.86
+  boundaryMaxY: 10.4
+  boundaryZ: 11.498
+  speed: 0

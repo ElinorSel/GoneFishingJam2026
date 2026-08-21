@@ -9,36 +9,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1852293271839311402, guid: 1de17fcadb6698d4e8bd9f58f5f33b8b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1852293271839311402, guid: 1de17fcadb6698d4e8bd9f58f5f33b8b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1852293271839311402, guid: 1de17fcadb6698d4e8bd9f58f5f33b8b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1852293271839311402, guid: 1de17fcadb6698d4e8bd9f58f5f33b8b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1852293271839311402, guid: 1de17fcadb6698d4e8bd9f58f5f33b8b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 1852293271839311402, guid: 1de17fcadb6698d4e8bd9f58f5f33b8b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 1852293271839311402, guid: 1de17fcadb6698d4e8bd9f58f5f33b8b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5780113592107716798, guid: 1de17fcadb6698d4e8bd9f58f5f33b8b, type: 3}
       propertyPath: m_Name
-      value: Shrimp III
+      value: Gadd3
       objectReference: {fileID: 0}
     - target: {fileID: 6456840279525218494, guid: 1de17fcadb6698d4e8bd9f58f5f33b8b, type: 3}
       propertyPath: m_Color.b
@@ -55,7 +39,7 @@ PrefabInstance:
     - target: {fileID: 6497314173613705043, guid: 1de17fcadb6698d4e8bd9f58f5f33b8b, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: ab288147adf2fea419f33c9938037061, type: 2}
+      objectReference: {fileID: 2100000, guid: 7fa4fa87371ae6e4a82e270cd30fc3f0, type: 2}
     - target: {fileID: 6874071301371950957, guid: 1de17fcadb6698d4e8bd9f58f5f33b8b, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
