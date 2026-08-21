@@ -94,7 +94,7 @@ public class S_ShoppingZone : MonoBehaviour
         {
             autofisher1.interactable = false;
         }
-        if (!shopManager.autofish1Done)
+        if (!shopManager.autofish2Done)
         {
             Autofish2Check();
         }
