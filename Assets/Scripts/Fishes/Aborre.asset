@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Aborre
   m_EditorClassIdentifier: Assembly-CSharp::SO_Fish
   nameID: Aborre
-  tier: 000000000100000002000000
-  difficulty: 000000000100000002000000
+  tier: 000000000200000002000000
+  difficulty: 000000000200000002000000
   passiveIncome:
   - 0.5
   - 1
@@ -27,5 +27,5 @@ MonoBehaviour:
   - {fileID: 2788924621761803021, guid: 52cf218bf1b743f4a931909778e7c498, type: 3}
   Sprites:
   - {fileID: 21300000, guid: ee729d7ba6d4f19489caea288d0a7b8c, type: 3}
-  - {fileID: 21300000, guid: ee729d7ba6d4f19489caea288d0a7b8c, type: 3}
-  - {fileID: 21300000, guid: ee729d7ba6d4f19489caea288d0a7b8c, type: 3}
+  - {fileID: 21300000, guid: c5fff271256827547a485b03a8eecd70, type: 3}
+  - {fileID: 21300000, guid: 218c1ad62dd02ea44af09bcf5c0ac45a, type: 3}

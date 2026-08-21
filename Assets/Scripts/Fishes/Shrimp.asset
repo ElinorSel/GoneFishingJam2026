@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shrimp
   m_EditorClassIdentifier: Assembly-CSharp::SO_Fish
   nameID: Shrimp
-  tier: 000000000100000002000000
+  tier: 000000000200000002000000
   difficulty: 000000000100000001000000
   passiveIncome:
   - 0.1
@@ -27,5 +27,5 @@ MonoBehaviour:
   - {fileID: 2788924621761803021, guid: 8e831ab93e603ec4faeab74db0c17b14, type: 3}
   Sprites:
   - {fileID: 21300000, guid: 6a44d833af12c964084bef1724b3f0b9, type: 3}
-  - {fileID: 21300000, guid: 6a44d833af12c964084bef1724b3f0b9, type: 3}
-  - {fileID: 21300000, guid: 6a44d833af12c964084bef1724b3f0b9, type: 3}
+  - {fileID: 21300000, guid: a34ad7b2c6479c148a9bea6eb90def97, type: 3}
+  - {fileID: 21300000, guid: 3a464d60dfb20de44b3c037a88eb1b5a, type: 3}

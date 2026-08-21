@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mort
   m_EditorClassIdentifier: Assembly-CSharp::SO_Fish
   nameID: Mort
-  tier: 000000000100000002000000
+  tier: 000000000200000002000000
   difficulty: 000000000200000002000000
   passiveIncome:
   - 0.1
@@ -22,10 +22,10 @@ MonoBehaviour:
   rarity: 000000000000000000000000
   sellPrice: c80000002c01000090010000
   Prefabs:
-  - {fileID: 8029229966350652713, guid: 5a3f211b56e69f242bf8fd8b00e4228c, type: 3}
-  - {fileID: 5780113592107716798, guid: 1de17fcadb6698d4e8bd9f58f5f33b8b, type: 3}
-  - {fileID: 2788924621761803021, guid: 52cf218bf1b743f4a931909778e7c498, type: 3}
+  - {fileID: 8029229966350652713, guid: 74f60d0d2633362469fb89a03c5d614f, type: 3}
+  - {fileID: 5780113592107716798, guid: a028c92bbddd90c41b2b45de82d7a209, type: 3}
+  - {fileID: 2788924621761803021, guid: 03ba5b5cfcf6409448abef7babb31c18, type: 3}
   Sprites:
   - {fileID: 21300000, guid: ccc67a07ce007714aaf911f19d8e5bca, type: 3}
-  - {fileID: 21300000, guid: ccc67a07ce007714aaf911f19d8e5bca, type: 3}
-  - {fileID: 21300000, guid: ccc67a07ce007714aaf911f19d8e5bca, type: 3}
+  - {fileID: 21300000, guid: 944858dcc49614a468e28ac3c43263a7, type: 3}
+  - {fileID: 21300000, guid: d012dc98cd475424c819d6ba0bdb8cc3, type: 3}

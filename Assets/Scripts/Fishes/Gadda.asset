@@ -27,5 +27,5 @@ MonoBehaviour:
   - {fileID: 2788924621761803021, guid: 2633333a84815c54e8c9a2006650ab6c, type: 3}
   Sprites:
   - {fileID: 21300000, guid: 900d89d4c71e39b4b902a02577289611, type: 3}
-  - {fileID: 21300000, guid: 900d89d4c71e39b4b902a02577289611, type: 3}
-  - {fileID: 21300000, guid: 900d89d4c71e39b4b902a02577289611, type: 3}
+  - {fileID: 21300000, guid: 5e0305fdf1a33a44cb5214a832652b00, type: 3}
+  - {fileID: 21300000, guid: cae82974aa48d194c8f182a318acd4d3, type: 3}
