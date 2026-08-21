@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class S_ShopManager : MonoBehaviour
 {
@@ -16,6 +17,10 @@ public class S_ShopManager : MonoBehaviour
     public float speedUpgradePrice = 100;
     int boxsBought = 0;
     int speedIncreasesBought = 0;
+
+
+
+
 
 
     public void BuyStorageSlot()

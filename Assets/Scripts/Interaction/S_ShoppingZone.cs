@@ -18,8 +18,25 @@ public class S_ShoppingZone : MonoBehaviour
      [SerializeField] Button autofisher1;
      [SerializeField] Button autofisher2;
     [SerializeField] S_GameManager gameManager;
+
+
+    //_______________price text ref
+
+
+        [SerializeField] TextMeshProUGUI speedtxt;
+    [SerializeField] TextMeshProUGUI skilltxt;
+    [SerializeField] TextMeshProUGUI lucktxt;
+    [SerializeField] TextMeshProUGUI autofisher1txt;
+     [SerializeField] TextMeshProUGUI autofisher2txt;
+    [SerializeField] TextMeshProUGUI storagetxt;
+
+
+    
     private InputAction _interactAction;
     private bool inZone;
+
+
+
     void Start()
     {
        
