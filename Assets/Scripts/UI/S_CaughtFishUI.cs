@@ -1,6 +1,8 @@
 using UnityEngine;
 using TMPro;
 
+using UnityEngine.UI;
+
 public class S_CaughtFishUI : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -9,6 +11,8 @@ public class S_CaughtFishUI : MonoBehaviour
     [SerializeField] TMP_Text sellLabel;
 
     [SerializeField] GameObject caughtFishUI;
+    [SerializeField] Image caugtfishImage;
+    
     private float _sellPrice;
     string _nameID;
     int _tier;
@@ -33,7 +37,7 @@ public class S_CaughtFishUI : MonoBehaviour
           sellLabel.text = _sellPrice.ToString(); 
           _nameID = nameID;
           _tier = tier;
-
+          caugtfishImage.sprite = S_FishData.Instance.GetFishSprite( nameID, tier);
         caughtFishUI.SetActive(true);
 
     }
